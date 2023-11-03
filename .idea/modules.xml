@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spigot-api/battle.spigot.api.iml" filepath="$PROJECT_DIR$/spigot-api/battle.spigot.api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bungee/bungee.iml" filepath="$PROJECT_DIR$/bungee/bungee.iml" />
-      <module fileurl="file://$PROJECT_DIR$/parent.iml" filepath="$PROJECT_DIR$/parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spigot/spigot.iml" filepath="$PROJECT_DIR$/spigot/spigot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bungee/battle.bungee.iml" filepath="$PROJECT_DIR$/bungee/battle.bungee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spigot/battle.spigot.iml" filepath="$PROJECT_DIR$/spigot/battle.spigot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spigot-api/battle.spigot-api.iml" filepath="$PROJECT_DIR$/spigot-api/battle.spigot-api.iml" />
     </modules>
   </component>
 </project>

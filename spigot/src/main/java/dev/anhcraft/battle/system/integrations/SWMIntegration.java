@@ -19,7 +19,7 @@
  */
 
 package dev.anhcraft.battle.system.integrations;
-
+/*
 import com.grinderwolf.swm.api.SlimePlugin;
 import com.grinderwolf.swm.api.exceptions.CorruptedWorldException;
 import com.grinderwolf.swm.api.exceptions.NewerFormatException;
@@ -29,17 +29,17 @@ import com.grinderwolf.swm.api.loaders.SlimeLoader;
 import com.grinderwolf.swm.api.world.SlimeWorld;
 import com.grinderwolf.swm.api.world.properties.SlimePropertyMap;
 import com.grinderwolf.swm.plugin.config.ConfigManager;
-import com.grinderwolf.swm.plugin.config.WorldData;
+import com.grinderwolf.swm.plugin.config.WorldData;*/
 import dev.anhcraft.battle.BattleComponent;
-import dev.anhcraft.battle.BattlePlugin;
+import dev.anhcraft.battle.BattlePlugin;/*
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 
-import java.io.IOException;
+import java.io.IOException;*/
 import java.util.concurrent.CountDownLatch;
 
 public class SWMIntegration extends BattleComponent implements ISWMIntegration {
-    private final SlimePlugin api = (SlimePlugin) Bukkit.getPluginManager().getPlugin("SlimeWorldManager");
+    //private final SlimePlugin api = (SlimePlugin) Bukkit.getPluginManager().getPlugin("SlimeWorldManager");
 
     public SWMIntegration(BattlePlugin plugin) {
         super(plugin);
@@ -47,13 +47,14 @@ public class SWMIntegration extends BattleComponent implements ISWMIntegration {
 
     @Override
     public int isReadOnly(String world) {
-        WorldData worldData = ConfigManager.getWorldConfig().getWorlds().get(world);
-        return worldData == null ? -1 : (worldData.isReadOnly() ? 1 : 0);
+        /*WorldData worldData = ConfigManager.getWorldConfig().getWorlds().get(world);
+        return worldData == null ? -1 : (worldData.isReadOnly() ? 1 : 0);*/
+        return -1;
     }
 
     @Override
     public void reloadWorld(CountDownLatch countDownLatch, String world) {
-        WorldData worldData = ConfigManager.getWorldConfig().getWorlds().get(world);
+        /*WorldData worldData = ConfigManager.getWorldConfig().getWorlds().get(world);
         if (worldData != null) {
             SlimeLoader loader = api.getLoader(worldData.getDataSource());
             SlimePropertyMap map = worldData.toPropertyMap();
@@ -72,9 +73,9 @@ public class SWMIntegration extends BattleComponent implements ISWMIntegration {
             });
         } else {
             countDownLatch.countDown();
-        }
+        }*/
     }
-
+/*
     private class a implements Runnable {
         private final SlimeLoader loader;
         private final String world;
@@ -101,5 +102,5 @@ public class SWMIntegration extends BattleComponent implements ISWMIntegration {
                 countDownLatch.countDown();
             }
         }
-    }
+    }*/
 }

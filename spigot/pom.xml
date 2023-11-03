@@ -8,7 +8,7 @@
     <parent>
         <artifactId>battle</artifactId>
         <groupId>dev.anhcraft</groupId>
-        <version>1.4.7</version>
+        <version>1.5.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -48,12 +48,6 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.bstats</groupId>
-            <artifactId>bstats-bukkit</artifactId>
-            <version>${version.bstats}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>de.tr7zw</groupId>
             <artifactId>nbt-data-api</artifactId>
             <version>${version.nbtapi}</version>
@@ -75,11 +69,10 @@
             <version>${version.config}</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>${version.spigot}</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>${version.paper}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -93,14 +86,6 @@
             <artifactId>VaultAPI</artifactId>
             <version>${version.vault}</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.grinderwolf</groupId>
-            <artifactId>slimeworldmanager</artifactId>
-            <version>${version.swm}</version>
-            <systemPath>${basedir}/../lib/slimeworldmanager-plugin-${version.swm}.jar</systemPath>
-            <scope>system</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

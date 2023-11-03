@@ -32,21 +32,17 @@ import java.util.Map;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class BattleEffect {
-    @Setting
     @Description("The particle that used to make up this effect")
     private BattleParticle particle;
 
-    @Setting
     @Path("block_effect")
     @Description("Fake block effect")
     private FakeBlockEffect blockEffect;
 
-    @Setting
     @Description("The effect's type")
     @Validation(notNull = true)
     private EffectType type;
 
-    @Setting
     @Description("Effect options")
     @Validation(notNull = true, silent = true)
     @Example({

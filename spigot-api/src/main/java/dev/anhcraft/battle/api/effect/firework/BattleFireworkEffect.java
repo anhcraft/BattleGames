@@ -31,26 +31,21 @@ import java.util.List;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class BattleFireworkEffect {
-    @Setting
     @Description("The firework type")
     @Validation(notNull = true, silent = true)
     private FireworkEffect.Type type = FireworkEffect.Type.BALL;
 
-    @Setting
     @Description("Make this firework flicker")
     private boolean flicker;
 
-    @Setting
     @Description("Make this firework has a trail")
     private boolean trail;
 
-    @Setting
     @Path("primary_colors")
     @Description("All primary colors")
     @Validation(notNull = true, silent = true)
     private List<BattleColor> primaryColors = new ArrayList<>();
 
-    @Setting
     @Path("fade_colors")
     @Description("All fade colors")
     @Validation(notNull = true, silent = true)

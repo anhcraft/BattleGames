@@ -37,24 +37,20 @@ import java.util.stream.Collectors;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class MobRescueOptions extends GameOptions {
-    @Setting
     @Path("extra_farmer_countdown_time")
     @Description("Extra countdown time for farmers")
     private long extraCountdownTimeFarmer;
 
-    @Setting
     @Path("playing_spawn_points_farmer")
     @Description("The spawn points of team Farmer (in playing phase)")
     @Validation(notNull = true, silent = true)
     private List<String> playSpawnPointsFarmer = new ArrayList<>();
 
-    @Setting
     @Path("playing_spawn_points_thief")
     @Description("The spawn points of team Thief (in playing phase)")
     @Validation(notNull = true, silent = true)
     private List<String> playSpawnPointsThief = new ArrayList<>();
 
-    @Setting
     @Path("mob_groups")
     @Description("Configuration for mobs")
     @Validation(notNull = true)
@@ -87,7 +83,6 @@ public class MobRescueOptions extends GameOptions {
     })
     private Map<String, MobGroup> mobGroups;
 
-    @Setting
     @Path("weight_speed_ratio")
     @Description({
             "Ratio between mob weight and speed reduction",
@@ -98,19 +93,16 @@ public class MobRescueOptions extends GameOptions {
     })
     private double weightSpeedRatio;
 
-    @Setting
     @Path("gathering_region.corner_1")
     @Description("First corner of the gathering region")
     @Validation(notNull = true)
     private String gatheringRegionCorner1;
 
-    @Setting
     @Path("gathering_region.corner_2")
     @Description("Second corner of the gathering region")
     @Validation(notNull = true)
     private String gatheringRegionCorner2;
 
-    @Setting
     @Validation(notNull = true)
     @Description("Objectives")
     @Example({
@@ -128,17 +120,14 @@ public class MobRescueOptions extends GameOptions {
     })
     private Map<EntityType, MobRescueObjective> objectives;
 
-    @Setting
     @Path("sounds.on_pick_up_mob")
     @Description("Sound to be played on picking up mobs")
     private BattleSound pickUpMobSound;
 
-    @Setting
     @Path("sounds.on_put_down_mob")
     @Description("Sound to be played on putting down mobs")
     private BattleSound putDownMobSound;
 
-    @Setting
     @Path("sounds.extra_countdown")
     @Description("Sound during extra countdown phrase")
     private BattleSound extraCountdownSound;

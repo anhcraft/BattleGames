@@ -30,41 +30,34 @@ import org.jetbrains.annotations.Nullable;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class FlagOptions {
-    @Setting
     @Description("The location of the flag")
     @Validation(notNull = true)
     private String location;
 
-    @Setting
     @Path("display_name.valid")
     @Description("The name to be displayed when the flag state is valid")
     @Validation(notNull = true)
     private String validDisplayName;
 
-    @Setting
     @Path("display_name.invalid")
     @Description("The name to be displayed when the flag state is invalid")
     @Validation(notNull = true)
     private String invalidDisplayName;
 
-    @Setting
     @Path("display_name.neutral")
     @Description("The name to be displayed when the flag state is neutral")
     @Validation(notNull = true)
     private String neutralDisplayName;
 
-    @Setting
     @Path("max_health")
     @Description("The maximum health points of the flag")
     @Validation(notNull = true)
     private int maxHealth = 10;
 
-    @Setting
     @Path("start_capture_sound")
     @Description("The sound on starting the capture")
     private BattleSound startCaptureSound;
 
-    @Setting
     @Path("stop_capture_sound")
     @Description("The sound on stopping the capture")
     private BattleSound stopCaptureSound;

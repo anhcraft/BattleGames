@@ -52,24 +52,21 @@ import java.util.Objects;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class Arena implements Informative {
+    @Exclude
     private final String id;
 
-    @Setting
     @Description("The name of this arena")
     @Validation(notNull = true, silent = true)
     private String name;
 
-    @Setting
     @Description("The game mode")
     @Validation(notNull = true)
     private String mode;
 
-    @Setting
     @Description("The icon of this arena")
     @Validation(notNull = true)
     private PreparedItem icon;
 
-    @Setting
     @Path("game_options")
     @Description(
             {
@@ -81,22 +78,18 @@ public class Arena implements Informative {
     @Consistent
     private GameOptions gameOptions;
 
-    @Setting
     @Path("max_time")
     @Description("The maximum playing time")
     private long maxTime;
 
-    @Setting
     @Path("max_players")
     @Description("The maximum number of players")
     private int maxPlayers;
 
-    @Setting
     @Path("allow_late_joins")
     @Description("Able to join a game even it has started")
     private boolean allowLateJoins;
 
-    @Setting
     @Path("final_exp_formula")
     @Description({
             "The formula for calculating the final exp",
@@ -108,7 +101,6 @@ public class Arena implements Informative {
     @Validation(notNull = true)
     private String finalExpCalculator;
 
-    @Setting
     @Path("final_money_formula")
     @Description({
             "The formula for calculating the final money",
@@ -120,7 +112,6 @@ public class Arena implements Informative {
     @Validation(notNull = true)
     private String finalMoneyCalculator;
 
-    @Setting
     @Path("end_commands.winners")
     @Description({
             "Commands to be executed by the console at the end",
@@ -129,7 +120,6 @@ public class Arena implements Informative {
     })
     private List<String> endCommandWinners;
 
-    @Setting
     @Path("end_commands.losers")
     @Description({
             "Commands to be executed by the console at the end",
@@ -138,7 +128,6 @@ public class Arena implements Informative {
     })
     private List<String> endCommandLosers;
 
-    @Setting
     @Path("render_gui_on_death")
     @Description({
             "Re-renders the GUI on death",
@@ -146,7 +135,6 @@ public class Arena implements Informative {
     })
     private boolean renderGuiOnDeath = true;
 
-    @Setting
     @Path("bungeecord.enabled")
     @Description({
             "Enable the Bungeecord support for this arena",
@@ -155,7 +143,6 @@ public class Arena implements Informative {
     })
     private boolean bungeeSupport;
 
-    @Setting
     @Path("bungeecord.remote_servers")
     @Description({
             "List of remote servers",
@@ -164,31 +151,25 @@ public class Arena implements Informative {
     @Validation(notNull = true, silent = true)
     private List<String> remoteServers = new ArrayList<>();
 
-    @Setting
     @Path("end_firework")
     @Description("The firework to be spawned when the game ends")
     private BattleFirework endFirework;
 
-    @Setting
     @Path("end_delay")
     @Description("The delay time before the game actually ends")
     private long endDelay = 60;
 
-    @Setting
     @Path("result_broadcast.won")
     @Description("The message to be sent to the winners")
     private List<String> wonReport;
 
-    @Setting
     @Path("result_broadcast.lost")
     @Description("The message to be sent to the losers")
     private List<String> lostReport;
 
-    @Setting
     @Description("Rollback settings")
     private Rollback rollback;
 
-    @Setting
     @Path("empty_regions")
     @Consistent
     @Example({
@@ -199,7 +180,6 @@ public class Arena implements Informative {
     })
     private List<PositionPair> emptyRegions;
 
-    @Setting
     @Path("max_deaths")
     @Description({
             "Maximum deaths allowed per player",
@@ -210,18 +190,15 @@ public class Arena implements Informative {
     })
     private int maxDeaths = -1;
 
-    @Setting
     @Path("kill_stats_by_monsters")
     @Description({
             "Kill stats will be counted for monsters"
     })
     private boolean killStatsByMonsters;
 
-    @Setting
     @Path("disable_death_message")
     private boolean disableDeathMessage;
 
-    @Setting
     @Path("message_on_join")
     private List<String> messageOnJoin;
 

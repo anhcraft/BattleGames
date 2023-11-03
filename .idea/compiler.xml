@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spigot" />
-        <module name="battle.spigot.api" />
-        <module name="bungee" />
+        <module name="battle.bungee" />
+        <module name="battle.spigot-api" />
+        <module name="battle.spigot" />
         <module name="Shared" />
       </profile>
     </annotationProcessing>
@@ -24,6 +24,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="battle" options="-parameters" />
+      <module name="battle.bungee" options="-parameters" />
+      <module name="battle.spigot" options="-parameters" />
+      <module name="battle.spigot-api" options="-parameters" />
       <module name="battle.spigot.api" options="-parameters" />
       <module name="bungee" options="-parameters" />
       <module name="parent" options="-parameters" />

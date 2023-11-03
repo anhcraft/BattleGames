@@ -32,7 +32,6 @@ import java.util.stream.Collectors;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class DeathmatchOptions extends GameOptions {
-    @Setting
     @Path("playing_spawn_points")
     @Description("The spawn points (in playing phase)")
     @Validation(notNull = true, silent = true)

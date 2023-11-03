@@ -28,16 +28,13 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class BattleParticle {
-    @Setting
     @Description("The type of particle")
     @Validation(notNull = true, silent = true)
     private Particle type = Particle.CLOUD;
 
-    @Setting
     @Description("The number of particles")
     private int count = 1;
 
-    @Setting
     @Path("offset_x")
     @Description({
             "The maximum random offset on the X axis",
@@ -45,7 +42,6 @@ public class BattleParticle {
     })
     private double offsetX;
 
-    @Setting
     @Path("offset_y")
     @Description({
             "The maximum random offset on the Y axis",
@@ -53,7 +49,6 @@ public class BattleParticle {
     })
     private double offsetY;
 
-    @Setting
     @Path("offset_z")
     @Description({
             "The maximum random offset on the Z axis",
@@ -61,7 +56,6 @@ public class BattleParticle {
     })
     private double offsetZ;
 
-    @Setting
     @Description({
             "Particle speed"
     })

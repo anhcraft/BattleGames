@@ -28,7 +28,6 @@ import java.util.*;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class BedWarOptions extends GameOptions {
-    @Setting
     @Description("List of teams")
     @Example({
             "teams:",
@@ -52,7 +51,6 @@ public class BedWarOptions extends GameOptions {
     @Validation(notNull = true, silent = true)
     private final Map<String, BWTeamOptions> teams = new HashMap<>();
 
-    @Setting
     @Path("team_size")
     @Description("The size of a team")
     private int teamSize = 2;

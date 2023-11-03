@@ -23,22 +23,18 @@ package dev.anhcraft.battle.api.arena.game;
 import dev.anhcraft.config.annotations.Configurable;
 import dev.anhcraft.config.annotations.Description;
 import dev.anhcraft.config.annotations.Path;
-import dev.anhcraft.config.annotations.Setting;
 
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class MobRescueObjective {
-    @Setting
     @Path("amount.min")
     @Description("Minimum amount of entities")
     private int minAmount = 1;
 
-    @Setting
     @Path("amount.max")
     @Description("Maximum amount of entities")
     private int maxAmount = 1;
 
-    @Setting
     @Path("reward_coins")
     @Description("Some coins to reward the player")
     private double rewardCoins;

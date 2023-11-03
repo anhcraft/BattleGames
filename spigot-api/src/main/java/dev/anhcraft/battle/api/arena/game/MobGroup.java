@@ -29,18 +29,15 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class MobGroup {
-    @Setting
     @Description("Where to spawn the mobs")
     @Validation(notNull = true)
     private String location;
 
-    @Setting
     @Path("entity_type")
     @Description("Mob type")
     @Validation(notNull = true)
     private EntityType entityType;
 
-    @Setting
     @Description({
             "Weight of each entity",
             "This value is used to reduce the speed of whom",
@@ -49,11 +46,9 @@ public class MobGroup {
     })
     private double weight;
 
-    @Setting
     @Description("Can thieves steal these mobs")
     private boolean stealable;
 
-    @Setting
     @Description("How many entities should be spawned")
     private int amount = 1;
 

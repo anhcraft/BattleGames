@@ -6,7 +6,7 @@
 
     <groupId>dev.anhcraft</groupId>
     <artifactId>battle</artifactId>
-    <version>1.4.7</version>
+    <version>1.5.0</version>
     <packaging>pom</packaging>
 
     <name>Battle</name>
@@ -30,19 +30,17 @@
     <properties>
         <fileName>Battle</fileName>
 
-        <version.spigot>1.19-R0.1-SNAPSHOT</version.spigot>
+        <version.paper>1.20.2-R0.1-SNAPSHOT</version.paper>
         <version.jvmkit>1.1.5</version.jvmkit>
         <version.exp4j>0.4.8</version.exp4j>
-        <version.papi>2.11.1</version.papi>
-        <version.paperlib>1.0.7</version.paperlib>
+        <version.papi>2.11.5</version.papi>
         <version.vault>1.7</version.vault>
         <version.inst>1.0.3</version.inst>
         <version.swm>2.2.1</version.swm>
         <version.acf>0.5.1-SNAPSHOT</version.acf>
-        <version.config>v1.1.0</version.config>
-        <version.bstats>3.0.0</version.bstats>
-        <version.hikaricp>4.0.3</version.hikaricp>
-        <version.nbtapi>2.9.2-SNAPSHOT</version.nbtapi>
+        <version.config>v1.1.9</version.config>
+        <version.hikaricp>5.0.1</version.hikaricp>
+        <version.nbtapi>2.12.0</version.nbtapi>
     </properties>
 
     <build>
@@ -159,6 +157,10 @@
         <repository>
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+        <repository>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
             <id>aikar</id>

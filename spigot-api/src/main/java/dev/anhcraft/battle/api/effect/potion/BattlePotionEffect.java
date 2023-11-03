@@ -28,24 +28,19 @@ import org.jetbrains.annotations.NotNull;
 
 @Configurable
 public class BattlePotionEffect {
-    @Setting
     @Description("The type of the effect")
     @Validation(notNull = true)
     private BattlePotionEffectType type;
 
-    @Setting
     @Description("How long does the effect remain")
     private int duration;
 
-    @Setting
     @Description("Boost the effect to a higher level")
     private int amplifier;
 
-    @Setting
     @Description("Makes potion effect produce more, translucent, particles")
     private boolean ambient;
 
-    @Setting
     @Description("Shows particle effects or not")
     private boolean particles;
 

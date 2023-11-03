@@ -22,24 +22,23 @@ package dev.anhcraft.battle.api.effect.firework;
 
 import dev.anhcraft.config.annotations.Configurable;
 import dev.anhcraft.config.annotations.Description;
-import dev.anhcraft.config.annotations.Setting;
 import dev.anhcraft.config.annotations.Validation;
 import org.bukkit.Location;
 import org.bukkit.entity.Firework;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class BattleFirework {
-    @Setting
     @Description("The firework's effects")
     @Validation(notNull = true, silent = true)
     private Map<String, BattleFireworkEffect> effects = new HashMap<>();
 
-    @Setting
     @Description("The firework's power")
     private int power;
 

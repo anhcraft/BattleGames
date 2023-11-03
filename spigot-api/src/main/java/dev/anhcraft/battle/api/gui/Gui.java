@@ -42,12 +42,10 @@ public class Gui implements Informative {
     private final String id;
     private int size;
 
-    @Setting
     @Description("A nice title for the GUI")
     @Validation(notNull = true)
     private String title;
 
-    @Setting
     @Description("List of components")
     @Validation(notNull = true, silent = true)
     @Example({
@@ -74,7 +72,6 @@ public class Gui implements Informative {
     })
     private Map<String, Component> components = new HashMap<>();
 
-    @Setting
     @Description("Sound to play on opening")
     private BattleSound sound;
 

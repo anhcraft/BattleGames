@@ -25,26 +25,22 @@ import dev.anhcraft.battle.utils.info.InfoHolder;
 import dev.anhcraft.config.annotations.Configurable;
 import dev.anhcraft.config.annotations.Description;
 import dev.anhcraft.config.annotations.Path;
-import dev.anhcraft.config.annotations.Setting;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
 @Configurable
 public class Progression implements Comparable<Progression>, Informative {
-    @Setting
     @Description({
             "Amount of objects need to be achieved",
             "E.g: 10 kills, 10 wins, 10 deaths, etc"
     })
     private double amount;
 
-    @Setting
     @Path("reward.exp")
     @Description("Amount of exp points to reward the player")
     private long rewardExp;
 
-    @Setting
     @Path("reward.money")
     @Description("Some money to reward the player")
     private double rewardMoney;

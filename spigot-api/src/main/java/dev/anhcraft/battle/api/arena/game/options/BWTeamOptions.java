@@ -31,23 +31,19 @@ import java.util.stream.Collectors;
 
 @Configurable
 public class BWTeamOptions {
-    @Setting
     @Description("The name of this team")
     @Validation(notNull = true)
     private String name;
 
-    @Setting
     @Description("The team's color")
     @Validation(notNull = true)
     private DyeColor color;
 
-    @Setting
     @Path("spawn_points")
     @Description("The spawn points of this team (in playing phase)")
     @Validation(notNull = true)
     private List<String> spawnPoints;
 
-    @Setting
     @Path("bed_location")
     @Description("Where the bed of this team located")
     @Validation(notNull = true)

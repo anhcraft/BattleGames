@@ -33,13 +33,11 @@ import java.util.stream.Collectors;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class TeamDeathmatchOptions extends GameOptions {
-    @Setting
     @Path("playing_spawn_points_a")
     @Description("The spawn points of team A (in playing phase)")
     @Validation(notNull = true, silent = true)
     private List<String> playSpawnPointsA = new ArrayList<>();
 
-    @Setting
     @Path("playing_spawn_points_b")
     @Description("The spawn points of team B (in playing phase)")
     @Validation(notNull = true, silent = true)

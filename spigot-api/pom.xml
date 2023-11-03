@@ -8,7 +8,7 @@
     <parent>
         <artifactId>battle</artifactId>
         <groupId>dev.anhcraft</groupId>
-        <version>1.4.7</version>
+        <version>1.5.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -45,23 +45,15 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.papermc</groupId>
-            <artifactId>paperlib</artifactId>
-            <version>${version.paperlib}</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
             <groupId>de.tr7zw</groupId>
             <artifactId>nbt-data-api</artifactId>
             <version>${version.nbtapi}</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>${version.spigot}</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>${version.paper}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

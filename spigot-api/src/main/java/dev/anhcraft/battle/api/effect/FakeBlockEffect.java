@@ -28,12 +28,10 @@ import org.jetbrains.annotations.NotNull;
 
 @Configurable
 public class FakeBlockEffect {
-    @Setting
     @Description("The material of this block")
     @Validation(notNull = true)
     private Material material;
 
-    @Setting
     @Description("External block data")
     private byte data;
 

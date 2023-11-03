@@ -32,9 +32,9 @@ import java.util.*;
 
 @Configurable
 public class Advancement implements Informative {
+    @Exclude
     private final String id;
 
-    @Setting
     @Description({
             "The statistic type",
             "All statistic types can be seen here: <a href=\"https://github.com/battlegames/Battle-Hub/wiki/Statistics\">https://github.com/battlegames/Battle-Hub/wiki/Statistics</a>",
@@ -43,21 +43,17 @@ public class Advancement implements Informative {
     @Validation(notNull = true)
     private String type;
 
-    @Setting
     @Description("The advancement's name")
     @Validation(notNull = true)
     private String name;
 
-    @Setting
     @Description("A nice description for this advancement")
     private List<String> description;
 
-    @Setting
     @Validation(notNull = true)
     @Description("The icon")
     private Material icon;
 
-    @Setting
     @Path("inherit_progress")
     @Description({
             "Should a player's progressions be inherited from",
@@ -67,7 +63,6 @@ public class Advancement implements Informative {
     })
     private boolean inheritProgress;
 
-    @Setting
     @Description({
             "Different period of this advancements",
             "They can be known as 'levels'"

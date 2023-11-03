@@ -34,27 +34,22 @@ import java.util.stream.Collectors;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class GameOptions {
-    @Setting
     @Path("min_players")
     @Description("The minimum players needed to start a game")
     private int minPlayers = 1;
 
-    @Setting
     @Path("countdown_time")
     @Description("The countdown time (in ticks)")
     private long countdownTime = 300;
 
-    @Setting
     @Path("spawn_protection_time")
     @Description("Protection time when a player spawns (or respawn) (in ticks)")
     private long spawnProtectionTime = 40;
 
-    @Setting
     @Path("item_selection_time")
     @Description("The time for selecting Battle items (in ticks)")
     private long itemSelectTime = 200;
 
-    @Setting
     @Path("respawn_waiting_time")
     @Description({
             "How long players need to wait before respawn (in ticks)",
@@ -62,13 +57,11 @@ public class GameOptions {
     })
     private long respawnWaitTime = 200;
 
-    @Setting
     @Path("waiting_spawn_points")
     @Description("Spawn points in waiting phase")
     @Validation(notNull = true, silent = true)
     private List<String> waitSpawnPoints = new ArrayList<>();
 
-    @Setting
     @Path("sounds.countdown")
     @Description("Sound during countdown phrase")
     private BattleSound countdownSound;

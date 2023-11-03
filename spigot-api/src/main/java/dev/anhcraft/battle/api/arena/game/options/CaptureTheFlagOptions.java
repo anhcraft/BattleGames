@@ -28,7 +28,6 @@ import java.util.*;
 @SuppressWarnings("FieldMayBeFinal")
 @Configurable
 public class CaptureTheFlagOptions extends TeamDeathmatchOptions {
-    @Setting
     @Description("All flags in the arena")
     @Validation(notNull = true, silent = true)
     @Example({
